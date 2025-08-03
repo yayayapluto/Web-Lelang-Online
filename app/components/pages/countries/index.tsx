@@ -45,7 +45,7 @@ import {capitalize} from "~/utils/string-formatter";
 import {CountryColumn} from "~/components/columns/countryColumn";
 
 type sortDirType = 'asc' | 'desc'
-type sortByType = 'username' | 'email' | 'phone' | 'role' | 'created_at'
+type sortByType = 'nama' | 'kode' | 'nomor' | 'created_at'
 
 export default function CategoryIndex() {
     // useProtectRoute()
@@ -54,7 +54,7 @@ export default function CategoryIndex() {
     const [searchTerm, setSearchTerm] = useState<string>("");
 
     const baseUrl = import.meta.env.VITE_BASE_URL
-    const [url, setUrl] = useState(`${baseUrl}/api/admin/users`)
+    const [url, setUrl] = useState(`${baseUrl}/api/admin/countries`)
     const [reload, setReload] = useState(false)
 
     useEffect(() => {
@@ -100,7 +100,7 @@ export default function CategoryIndex() {
     const [importFormData, setImportFormData] = useState<FormData | undefined>()
     const [doImport, setDoImport] = useState(false)
     const { isLoading: importLoading, error: importError, result: importResult } = useApi<null>({
-        url: `${baseUrl}/api/admin/users/import`,
+        url: `${baseUrl}/api/countries/uploadBatchData`,
         headers: {
             Authorization: `Bearer ${token}`
         },
@@ -128,6 +128,21 @@ export default function CategoryIndex() {
         setDoImport(true)
     }
 
+    const handleDownload = async () => {
+        const res = await fetch("http://localhost:8000/storage/samples/contoh_country.json");
+        const blob = await res.blob();
+        const url = window.URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "contoh_country.json";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        window.URL.revokeObjectURL(url);
+    };
+
+
     return (
         <div className="container mx-auto py-4">
             <Breadcrumb>
@@ -137,7 +152,7 @@ export default function CategoryIndex() {
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />
                     <BreadcrumbItem>
-                        <BreadcrumbPage>Users</BreadcrumbPage>
+                        <BreadcrumbPage>Modul-Negara</BreadcrumbPage>
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </Breadcrumb>
@@ -181,7 +196,7 @@ export default function CategoryIndex() {
                         <RefreshCcw className={`${isLoading && "animate-spin"}`}/>
                     </Button>
 
-                    <Button className={cn("")} disabled={isLoading} onClick={() => navigate("/users/create")}>
+                    <Button className={cn("")} disabled={isLoading} onClick={() => navigate("/modul-negara/create")}>
                         Add new
                         <Plus/>
                     </Button>
@@ -196,12 +211,12 @@ export default function CategoryIndex() {
                             <DialogHeader>
                                 <DialogTitle>Import from excel</DialogTitle>
                                 <DialogDescription>
-                                    Select an excel/csv file to import |
+                                    Select an json/csv file to import |
                                     <span>
-                                        <a href="http://localhost:8000/storage/samples/users_sample.xlsx" className={"underline"}> download file template</a>
+                                        <a download href="http://localhost:8000/storage/samples/contoh_country.json" className={"underline"}> Download file template</a>
                                     </span>
                                 </DialogDescription>
-                                <Input type="file" onChange={handleImportFileChange} name={"importUsers"} accept={".xlsx,.csv"} />
+                                <Input type="file" onChange={handleImportFileChange} name={"importCountries"} accept={".json,.csv"} />
                                 <Button onClick={submitImport}>
                                     {importLoading ? (<Spinner isWhite/>) : "Import"}
                                 </Button>
