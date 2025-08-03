@@ -102,7 +102,7 @@ export default function CategoryIndex() {
     const [importFormData, setImportFormData] = useState<FormData | undefined>()
     const [doImport, setDoImport] = useState(false)
     const { isLoading: importLoading, error: importError, result: importResult } = useApi<null>({
-        url: `${baseUrl}/api/admin/users/import`,
+        url: `${baseUrl}/api/provinces/uploadBatchData`,
         headers: {
             Authorization: `Bearer ${token}`
         },
@@ -139,7 +139,7 @@ export default function CategoryIndex() {
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />
                     <BreadcrumbItem>
-                        <BreadcrumbPage>Provinsi</BreadcrumbPage>
+                        <BreadcrumbPage>Modul-Provinsi</BreadcrumbPage>
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </Breadcrumb>
@@ -183,7 +183,7 @@ export default function CategoryIndex() {
                         <RefreshCcw className={`${isLoading && "animate-spin"}`}/>
                     </Button>
 
-                    <Button className={cn("")} disabled={isLoading} onClick={() => navigate("/users/create")}>
+                    <Button className={cn("")} disabled={isLoading} onClick={() => navigate("/modul-provinsi/create")}>
                         Add new
                         <Plus/>
                     </Button>
@@ -198,12 +198,12 @@ export default function CategoryIndex() {
                             <DialogHeader>
                                 <DialogTitle>Import from excel</DialogTitle>
                                 <DialogDescription>
-                                    Select an excel/csv file to import |
+                                    Select an json/csv file to import |
                                     <span>
-                                        <a href="http://localhost:8000/storage/samples/users_sample.xlsx" className={"underline"}> download file template</a>
+                                        <a href="http://localhost:8000/storage/samples/contoh_provinsi.json" className={"underline"}> Download file template</a>
                                     </span>
                                 </DialogDescription>
-                                <Input type="file" onChange={handleImportFileChange} name={"importUsers"} accept={".xlsx,.csv"} />
+                                <Input type="file" onChange={handleImportFileChange} name={"importProvinces"} accept={".json,.csv"} />
                                 <Button onClick={submitImport}>
                                     {importLoading ? (<Spinner isWhite/>) : "Import"}
                                 </Button>
