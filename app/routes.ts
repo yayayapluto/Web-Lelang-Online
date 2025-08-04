@@ -74,6 +74,12 @@ export default [
             // route("/add", "components/pages/countries/create-form.tsx"),
             // route("/:id", "components/pages/countries/detail.tsx"),
             // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-pengguna", [
+            index("components/pages/users/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
         ])
     ])
 ] satisfies RouteConfig;
