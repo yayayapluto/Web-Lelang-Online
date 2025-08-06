@@ -38,6 +38,14 @@ bunx cap add android
 ```shel
 bun run build
 ```
+after build, open up vite.config.ts then after plugins, add this
+```typescript
+server: {
+    allowedHosts: true,
+    host: true,
+    port: 5174
+  }
+```
 ```shell
 bunx cap sync
 ```
