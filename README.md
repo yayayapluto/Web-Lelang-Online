@@ -10,7 +10,6 @@ bun i
 ```shel
 bun run dev
 ```
-note: copy the link to capacitor.config.ts
 
 ## Run capacitor
 ```shell
@@ -21,6 +20,14 @@ bun i @capacitor/cli
 ```
 ```shel
 bunx cap init
+```
+after running init, capacitor would be create file named capacitor.config.ts
+open capacitor.config.ts then after webDir, add this
+```typescript
+server: {
+    cleartext: true,
+    hostname: ""
+}
 ```
 ```shell
 bun i @capacitor/android
