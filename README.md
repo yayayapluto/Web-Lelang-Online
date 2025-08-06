@@ -11,6 +11,15 @@ bun i
 bun run dev
 ```
 ---
+### Start cloudflare tunnel
+Download cloudflared from the link: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/
+after finish downloading
+```shell
+cloudflared tunnel --url [your url goes here]
+```
+open up capacitor.config.ts again then change url to generated cloudflare quick tunnel url
+
+---
 ## Run capacitor
 ```shell
 bun i @capacitor/core
@@ -100,12 +109,3 @@ plugins: {
       },
     },
 ```
-
----
-### Start cloudflare tunnel
-Download cloudflared from the link: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/
-after finish downloading
-```shell
-cloudflared tunnel --url [your url goes here]
-```
-open up capacitor.config.ts again then change url to generated cloudflare quick tunnel url
