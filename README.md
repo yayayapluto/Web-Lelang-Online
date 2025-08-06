@@ -10,14 +10,6 @@ bun i
 ```shel
 bun run dev
 ```
----
-### Start cloudflare tunnel
-Download cloudflared from the link: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/
-after finish downloading
-```shell
-cloudflared tunnel --url [your url goes here]
-```
-open up capacitor.config.ts again then change url to generated cloudflare quick tunnel url
 
 ---
 ## Run capacitor
@@ -108,4 +100,19 @@ plugins: {
         splashImmersive: true,
       },
     },
+```
+
+---
+### Start cloudflare tunnel
+Download cloudflared from the link: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/
+after finish downloading
+```shell
+cloudflared tunnel --url [your url goes here]
+```
+open up capacitor.config.ts again then change url to generated cloudflare quick tunnel url
+```shell
+bunx cap sync
+```
+```shell
+bunx cap run android
 ```
