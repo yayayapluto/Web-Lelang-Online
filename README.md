@@ -26,7 +26,7 @@ open capacitor.config.ts then after webDir, add this
 ```typescript
 server: {
     cleartext: true,
-    hostname: ""
+    hostname: "" // paste local url of the react-router dev, ex: http://localhost:5173/
 }
 ```
 ```shell
