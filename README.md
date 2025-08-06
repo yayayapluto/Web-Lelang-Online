@@ -7,5 +7,30 @@ git clone https://github.com/yayayapluto/Web-Lelang-Online
 bun i
 ```
 
-### Buka folder app, lalu baca readme yang ada
-#### Referensi: https://github.com/yayayapluto/Web_Sisfo_Sarpras
+```shel
+bun run dev
+```
+note: copy the link to capacitor.config.ts
+
+## Run capacitor
+```shell
+bun i @capacitor/core
+```
+```shell
+bun i @capacitor/cli
+```
+```shel
+bunx cap int
+```
+```shell
+bun i @capacitor/android
+```
+```shell
+bunx cap add android
+```
+```shell
+bunx cap sync
+```
+```shell
+bunx cap run android
+```
