@@ -10,7 +10,7 @@ bun i
 ```shel
 bun run dev
 ```
-
+---
 ## Run capacitor
 ```shell
 bun i @capacitor/core
@@ -99,4 +99,12 @@ plugins: {
         splashImmersive: true,
       },
     },
+```
+
+---
+### Start cloudflare tunnel
+Download cloudflared from the link: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/
+after finish downloading
+```shell
+cloudflared tunnel --url [your url goes here]
 ```
