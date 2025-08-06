@@ -1,0 +1,103 @@
+import {type RouteConfig, index, layout, route, prefix} from "@react-router/dev/routes";
+
+export default [
+    layout("components/layouts/dashboardLayout.tsx", [
+        index("routes/dashboard.tsx"),
+        ...prefix("modul-negara", [
+            index("components/pages/countries/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-provinsi", [
+            index("components/pages/provinces/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-kota", [
+            index("components/pages/cities/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-kecamatan", [
+            index("components/pages/subdistricts/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-kelurahan", [
+            index("components/pages/villages/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-jenis-pekerjaan", [
+            index("components/pages/jobTypes/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-kategori-barang", [
+            index("components/pages/categories/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-jenis-barang", [
+            index("components/pages/itemTypes/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-jenis-objek", [
+            index("components/pages/objectTypes/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-file", [
+            index("components/pages/files/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-kpknl", [
+            index("components/pages/kpknls/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-penyelenggara", [
+            index("components/pages/organizers/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-pengguna", [
+            index("components/pages/users/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-penjual", [
+            index("components/pages/sellers/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-barang", [
+            index("components/pages/items/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-foto-barang", [
+            index("components/pages/itemPhotos/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ])
+    ])
+] satisfies RouteConfig;
