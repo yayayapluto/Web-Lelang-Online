@@ -1,0 +1,1 @@
+## FUngsi dari folder columns yaitu untuk konfigurasi column di data table shadcn

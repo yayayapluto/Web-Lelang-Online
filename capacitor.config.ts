@@ -1,0 +1,29 @@
+  import type { CapacitorConfig } from '@capacitor/cli';
+
+  const config: CapacitorConfig = {
+    appId: 'com.adminLelangOnline.app',
+    appName: 'app-admin-lelang-online',
+    webDir: 'build',
+    server: {
+      url: "https://sri-liechtenstein-hq-before.trycloudflare.com",
+      cleartext: true
+    },
+    plugins: {
+      SplashScreen: {
+        launchShowDuration: 3000,
+        launchAutoHide: true,
+        launchFadeOutDuration: 1000,
+        backgroundColor: "#ffffffff",
+        androidSplashResourceName: "splash",
+        androidScaleType: "CENTER_CROP",
+        showSpinner: true,
+        androidSpinnerStyle: "small",
+        iosSpinnerStyle: "small",
+        spinnerColor: "#999999",
+        splashFullScreen: true,
+        splashImmersive: true,
+      },
+    },
+  };
+
+  export default config;

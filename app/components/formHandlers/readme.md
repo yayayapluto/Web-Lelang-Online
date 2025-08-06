@@ -1,0 +1,2 @@
+## untuk folder formHandlers itu berfungsi sebagai handler form aja
+### yang perlu di catat adalah, wajib dibuat per MODUL, tiap modul CRUD biasanya ada 2 form handler, yaitu untuk create dan juga untuk edit 
