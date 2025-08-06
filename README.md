@@ -46,6 +46,10 @@ server: {
     port: 5174
   }
 ```
+also open up capacitor.config.ts, change webDir to 'build'
+```typescript
+webDir: 'build'
+```
 ```shell
 bunx cap sync
 ```
