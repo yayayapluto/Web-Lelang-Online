@@ -20,7 +20,7 @@ bun i @capacitor/core
 bun i @capacitor/cli
 ```
 ```shel
-bunx cap int
+bunx cap init
 ```
 ```shell
 bun i @capacitor/android
