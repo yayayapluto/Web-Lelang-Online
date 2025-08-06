@@ -35,6 +35,9 @@ bun i @capacitor/android
 ```shell
 bunx cap add android
 ```
+```shel
+bun run build
+```
 ```shell
 bunx cap sync
 ```
