@@ -108,3 +108,4 @@ after finish downloading
 ```shell
 cloudflared tunnel --url [your url goes here]
 ```
+open up capacitor.config.ts again then change url to generated cloudflare quick tunnel url
