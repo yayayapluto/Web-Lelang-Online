@@ -58,6 +58,9 @@ bunx cap sync
 bunx cap run android
 ```
 ### Optional step, configure app icon and splash
+```shell
+bun i @capacitor/assets
+```
 on root folder, add new folder named assets:
 ```
 assets/
