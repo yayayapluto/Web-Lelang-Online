@@ -86,6 +86,18 @@ export default [
             // route("/add", "components/pages/countries/create-form.tsx"),
             // route("/:id", "components/pages/countries/detail.tsx"),
             // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-barang", [
+            index("components/pages/items/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-foto-barang", [
+            index("components/pages/itemPhotos/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
         ])
     ])
 ] satisfies RouteConfig;
