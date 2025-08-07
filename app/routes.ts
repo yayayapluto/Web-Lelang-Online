@@ -104,6 +104,12 @@ export default [
             // route("/add", "components/pages/countries/create-form.tsx"),
             // route("/:id", "components/pages/countries/detail.tsx"),
             // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+        ]),
+        ...prefix("modul-konten-lelang", [
+            index("components/pages/auctionContents/index.tsx"),
+            // route("/add", "components/pages/countries/create-form.tsx"),
+            // route("/:id", "components/pages/countries/detail.tsx"),
+            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
         ])
     ])
 ] satisfies RouteConfig;
