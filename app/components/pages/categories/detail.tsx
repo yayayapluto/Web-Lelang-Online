@@ -5,8 +5,8 @@ export default function CategoryDetail() {
     return (
         <GenericEntityDetail<Category>
             resourceUrl={"categories"}
-            breadcrumbModuleLabel="Modul-Kelurahan"
-            breadcrumbModulePath="/modul-kelurahan"
+            breadcrumbModuleLabel="Modul-Kategori-Barang"
+            breadcrumbModulePath="/modul-Kategori-Barang"
             getResourceName={(category) => category.nama}
             renderDetails={(category) => (
                 <div className="space-y-4">
