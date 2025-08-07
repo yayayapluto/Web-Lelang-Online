@@ -95,9 +95,9 @@ export default [
         ]),
         ...prefix("modul-foto-barang", [
             index("components/pages/itemPhotos/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/itemPhotos/create-form.tsx"),
+            route("/:id", "components/pages/itemPhotos/detail.tsx"),
+            // route("/:id/edit", "components/pages/itemPhotos/update-form.tsx"),
         ]),
         ...prefix("modul-lelang", [
             index("components/pages/auctions/index.tsx"),
