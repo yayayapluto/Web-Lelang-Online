@@ -80,7 +80,7 @@ export default function GenericEntityIndex<T>({
                                                   initialSortDir = 'asc',
                                                   additionalActions,
                                                   breadcrumbs = [
-                                                      { href: "/dashboard", label: "Dashboard" },
+                                                      { href: "/", label: "Dashboard" },
                                                       { href: "", label: `Modul-${entityName}` }
                                                   ]
                                               }: EntityIndexProps<T>) {
