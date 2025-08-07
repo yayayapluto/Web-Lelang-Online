@@ -77,9 +77,9 @@ export default [
         ]),
         ...prefix("modul-pengguna", [
             index("components/pages/users/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/users/create-form.tsx"),
+            route("/:id", "components/pages/users/detail.tsx"),
+            // route("/:id/edit", "components/pages/users/update-form.tsx"),
         ]),
         ...prefix("modul-penjual", [
             index("components/pages/sellers/index.tsx"),

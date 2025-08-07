@@ -69,8 +69,9 @@ export const UserColumn: ColumnDef<User>[] = [
         header: "Alamat",
     },
     {
-        accessorKey: "file_ktp",
+        accessorKey: "file",
         header: "File KTP",
+        cell: ({row}) => row.original.file.file_url
     },
     {
         accessorKey: "subdistrict",
@@ -102,7 +103,7 @@ export const UserColumn: ColumnDef<User>[] = [
 
             return (
                 <Button variant={"outline"} onClick={() => {
-                    navigate(`/modul-jenis-objek/${data.id}`)
+                    navigate(`/modul-pengguna/${data.id}`)
                 }}>
                     <SquareArrowOutUpRight/>
                 </Button>
