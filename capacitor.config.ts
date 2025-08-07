@@ -6,7 +6,7 @@ const config: CapacitorConfig = {
   webDir: 'build',
   server: {
     cleartext: true,
-    url: "https://doctor-follows-invitations-sapphire.trycloudflare.com"
+    url: "https://citation-cruise-thing-shoes.trycloudflare.com"
   },
   plugins: {
     SplashScreen: {
