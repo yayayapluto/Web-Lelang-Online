@@ -25,7 +25,7 @@ export const useProtectRoute = () => {
     }, []);
 
     useEffect(() => {
-        if (!isLoading && result && result.role === "admin") {
+        if (!isLoading && result) {
             return;
         }
 
