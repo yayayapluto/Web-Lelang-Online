@@ -49,7 +49,7 @@ interface GenericDetailProps<T> {
     extraActions?: (item: T) => ReactNode;
 }
 
-const baseUrl = `${import.meta.env.VITE_BASE_URL}/api/`
+const baseUrl = `${import.meta.env.VITE_BASE_URL}/api`
 
 export function GenericEntityDetail<T extends Record<string, any>>({
                                                                        resourceUrl,
