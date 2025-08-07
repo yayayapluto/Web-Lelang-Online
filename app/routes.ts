@@ -83,9 +83,9 @@ export default [
         ]),
         ...prefix("modul-penjual", [
             index("components/pages/sellers/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/sellers/create-form.tsx"),
+            route("/:id", "components/pages/sellers/detail.tsx"),
+            // route("/:id/edit", "components/pages/sellers/update-form.tsx"),
         ]),
         ...prefix("modul-barang", [
             index("components/pages/items/index.tsx"),

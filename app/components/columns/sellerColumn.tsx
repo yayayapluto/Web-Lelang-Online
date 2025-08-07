@@ -31,7 +31,7 @@ export const SellerColumn: ColumnDef<Seller>[] = [
     },
     {
         accessorKey: "city",
-        header: "City",
+        header: "Kota",
         cell: ({row}) => row.original.city.nama
     },
     {
@@ -54,7 +54,7 @@ export const SellerColumn: ColumnDef<Seller>[] = [
 
             return (
                 <Button variant={"outline"} onClick={() => {
-                    navigate(`/modul-jenis-barang/${data.id}`)
+                    navigate(`/modul-penjual/${data.id}`)
                 }}>
                     <SquareArrowOutUpRight/>
                 </Button>
