@@ -54,7 +54,7 @@ export const KpknlColumn: ColumnDef<Kpknl>[] = [
 
             return (
                 <Button variant={"outline"} onClick={() => {
-                    navigate(`/modul-kelurahan/${data.id}`)
+                    navigate(`/modul-kpknl/${data.id}`)
                 }}>
                     <SquareArrowOutUpRight/>
                 </Button>

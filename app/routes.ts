@@ -65,9 +65,9 @@ export default [
         ]),
         ...prefix("modul-kpknl", [
             index("components/pages/kpknls/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/kpknls/create-form.tsx"),
+            route("/:id", "components/pages/kpknls/detail.tsx"),
+            // route("/:id/edit", "components/pages/kpknls/update-form.tsx"),
         ]),
         ...prefix("modul-penyelenggara", [
             index("components/pages/organizers/index.tsx"),
