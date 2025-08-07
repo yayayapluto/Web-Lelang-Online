@@ -71,9 +71,9 @@ export default [
         ]),
         ...prefix("modul-penyelenggara", [
             index("components/pages/organizers/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/organizers/create-form.tsx"),
+            route("/:id", "components/pages/organizers/detail.tsx"),
+            // route("/:id/edit", "components/pages/organizers/update-form.tsx"),
         ]),
         ...prefix("modul-pengguna", [
             index("components/pages/users/index.tsx"),
