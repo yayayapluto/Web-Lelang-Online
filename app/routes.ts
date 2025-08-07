@@ -11,9 +11,9 @@ export default [
         ]),
         ...prefix("modul-provinsi", [
             index("components/pages/provinces/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/provinces/create-form.tsx"),
+            route("/:id", "components/pages/provinces/detail.tsx"),
+            // route("/:id/edit", "components/pages/provinces/update-form.tsx"),
         ]),
         ...prefix("modul-kota", [
             index("components/pages/cities/index.tsx"),
