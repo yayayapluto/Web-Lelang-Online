@@ -101,9 +101,9 @@ export default [
         ]),
         ...prefix("modul-lelang", [
             index("components/pages/auctions/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/auctions/create-form.tsx"),
+            route("/:id", "components/pages/auctions/detail.tsx"),
+            // route("/:id/edit", "components/pages/auctions/update-form.tsx"),
         ]),
         ...prefix("modul-konten-lelang", [
             index("components/pages/auctionContents/index.tsx"),

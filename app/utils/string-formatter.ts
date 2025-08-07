@@ -5,3 +5,11 @@ export function capitalize(s: string) {
 export function makeDash(s: string) {
     return s.trim().replace(/ /g, "-")
 }
+
+export const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        minimumFractionDigits: 0,
+    }).format(amount);
+};

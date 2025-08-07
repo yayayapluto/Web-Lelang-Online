@@ -5,18 +5,7 @@ import { SquareArrowOutUpRight } from "lucide-react";
 import type { Auction } from "~/types/auction";
 import type { Province } from "~/types/province";
 import type { Kpknl } from "~/types/kpknl";
-
-const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat("id-ID", {
-        style: "currency",
-        currency: "IDR",
-        minimumFractionDigits: 0,
-    }).format(amount);
-};
-
-const formatDate = (isoString: string) => {
-    return new Date(isoString).toLocaleDateString("id-ID");
-};
+import {formatCurrency} from "~/utils/string-formatter";
 
 export const AuctionColumn: ColumnDef<Auction>[] = [
     {
@@ -44,17 +33,17 @@ export const AuctionColumn: ColumnDef<Auction>[] = [
     {
         accessorKey: "tanggal_mulai",
         header: "Tanggal Mulai",
-        cell: ({ row }) => formatDate(row.original.tanggal_mulai),
+        cell: ({ row }) => row.original.tanggal_mulai,
     },
     {
         accessorKey: "tanggal_selesai",
         header: "Tanggal Selesai",
-        cell: ({ row }) => formatDate(row.original.tanggal_selesai),
+        cell: ({ row }) => row.original.tanggal_selesai,
     },
     {
         accessorKey: "tanggal_batas_jaminan",
         header: "Batas Jaminan",
-        cell: ({ row }) => formatDate(row.original.tanggal_batas_jaminan),
+        cell: ({ row }) => row.original.tanggal_batas_jaminan,
     },
     {
         accessorKey: "province",
@@ -82,13 +71,13 @@ export const AuctionColumn: ColumnDef<Auction>[] = [
     },
     {
         accessorKey: "created_at",
-        header: "Dibuat Pada",
-        cell: ({ row }) => formatDate(row.original.created_at),
+        header: "Created at",
+        cell: ({ row }) => row.original.created_at,
     },
     {
         accessorKey: "updated_at",
-        header: "Diperbarui Pada",
-        cell: ({ row }) => formatDate(row.original.updated_at),
+        header: "Updated at",
+        cell: ({ row }) => row.original.updated_at,
     },
     {
         header: "Aksi",
