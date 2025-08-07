@@ -5,8 +5,8 @@ export default function JobTypeDetail() {
     return (
         <GenericEntityDetail<JobType>
             resourceUrl={"jobTypes"}
-            breadcrumbModuleLabel="Modul-Kelurahan"
-            breadcrumbModulePath="/modul-kelurahan"
+            breadcrumbModuleLabel="Modul-Jenis-Pekerjaan"
+            breadcrumbModulePath="/modul-jenis-pekerjaan"
             getResourceName={(jobType) => jobType.nama}
             renderDetails={(jobType) => (
                 <div className="space-y-4">
