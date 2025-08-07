@@ -53,15 +53,15 @@ export default [
         ]),
         ...prefix("modul-jenis-objek", [
             index("components/pages/objectTypes/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/objectTypes/create-form.tsx"),
+            route("/:id", "components/pages/objectTypes/detail.tsx"),
+            // route("/:id/edit", "components/pages/objectTypes/update-form.tsx"),
         ]),
         ...prefix("modul-file", [
             index("components/pages/files/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/files/create-form.tsx"),
+            route("/:id", "components/pages/files/detail.tsx"),
+            // route("/:id/edit", "components/pages/files/update-form.tsx"),
         ]),
         ...prefix("modul-kpknl", [
             index("components/pages/kpknls/index.tsx"),
