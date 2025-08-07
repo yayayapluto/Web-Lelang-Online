@@ -35,7 +35,7 @@ export const FileColumn: ColumnDef<File>[] = [
 
             return (
                 <Button variant={"outline"} onClick={() => {
-                    navigate(`/modul-jenis-pekerjaan/${data.id}`)
+                    navigate(`/modul-file/${data.id}`)
                 }}>
                     <SquareArrowOutUpRight/>
                 </Button>

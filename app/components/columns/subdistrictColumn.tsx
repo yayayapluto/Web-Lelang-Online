@@ -41,7 +41,7 @@ export const SubdistrictColumn: ColumnDef<Subdistrict>[] = [
 
             return (
                 <Button variant={"outline"} onClick={() => {
-                    navigate(`/modul-provinsi/${data.id}`)
+                    navigate(`/modul-kecamatan/${data.id}`)
                 }}>
                     <SquareArrowOutUpRight/>
                 </Button>
