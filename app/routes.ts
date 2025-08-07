@@ -89,9 +89,9 @@ export default [
         ]),
         ...prefix("modul-barang", [
             index("components/pages/items/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/items/create-form.tsx"),
+            route("/:id", "components/pages/items/detail.tsx"),
+            // route("/:id/edit", "components/pages/items/update-form.tsx"),
         ]),
         ...prefix("modul-foto-barang", [
             index("components/pages/itemPhotos/index.tsx"),

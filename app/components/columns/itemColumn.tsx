@@ -15,10 +15,6 @@ export const ItemColumn: ColumnDef<Item>[] = [
         header: "ID",
     },
     {
-        accessorKey: "nama",
-        header: "Nama",
-    },
-    {
         accessorKey: "bukti_kepemilikan",
         header: "Bukti Kepemilikan",
     },
@@ -55,31 +51,19 @@ export const ItemColumn: ColumnDef<Item>[] = [
         header: "Warna",
     },
     {
-        accessorKey: "item_type.nama", // Asumsi `item_type` punya `nama`
-        header: "Jenis Item",
-        id: "item_type",
-        cell: ({ row }) => {
-            const itemType = row.original.item_type?.nama;
-            return itemType || "-";
-        },
+        accessorKey: "item_type",
+        header: "Jenis Barang",
+        cell: ({ row }) => row.original.item_type.nama
     },
     {
-        accessorKey: "category.nama", // Asumsi `category` punya `nama`
-        header: "Kategori",
-        id: "category",
-        cell: ({ row }) => {
-            const category = row.original.category?.nama;
-            return category || "-";
-        },
+        accessorKey: "object_type",
+        header: "Jenis Objek",
+        cell: ({ row }) => row.original.object_type.nama
     },
     {
-        accessorKey: "category.nama", // Asumsi `category` punya `nama`
+        accessorKey: "category",
         header: "Kategori",
-        id: "category",
-        cell: ({ row }) => {
-            const category = row.original.category?.nama;
-            return category || "-";
-        },
+        cell: ({ row }) => row.original.category.nama
     },
     {
         accessorKey: "photos",
@@ -102,7 +86,7 @@ export const ItemColumn: ColumnDef<Item>[] = [
 
             return (
                 <Button variant={"outline"} onClick={() => {
-                    navigate(`/modul-jenis-pekerjaan/${data.id}`)
+                    navigate(`/modul-barang/${data.id}`)
                 }}>
                     <SquareArrowOutUpRight/>
                 </Button>
