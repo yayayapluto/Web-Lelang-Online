@@ -8,7 +8,7 @@ import {ItemColumn} from "~/components/columns/itemColumn";
 export default function ItemIndex() {
     return (
         <GenericEntityIndex<Item>
-            entityName="Jenis-Barang"
+            entityName="Barang"
             displayName="Item"
             apiEndpoint="items"
             columns={ItemColumn}

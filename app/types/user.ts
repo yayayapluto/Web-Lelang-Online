@@ -5,6 +5,7 @@ import type {Country} from "~/types/country";
 import type {City} from "~/types/city";
 import type {Subdistrict} from "~/types/subdistrict";
 import type {Village} from "~/types/village";
+import type {File} from "~/types/file";
 
 export type User = Mandatory & {
     job_type_id: number,
@@ -19,7 +20,7 @@ export type User = Mandatory & {
     tanggal_lahir: string,
     nomor_telepon: string,
     alamat: string,
-    file_ktp: string,
+    file_id: string,
     subdistrict_id: number,
     email: string,
     village_id: string,
@@ -29,5 +30,6 @@ export type User = Mandatory & {
     country: Country,
     city: City,
     subdistrict: Subdistrict,
-    village: Village
+    village: Village,
+    file: File
 }

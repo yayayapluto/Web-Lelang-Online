@@ -11,7 +11,7 @@ export const AuctionContentColumn: ColumnDef<AuctionContent>[] = [
     },
     {
         accessorKey: "auction",
-        header: "Auction",
+        header: "Lelang",
         cell: ({ row }) => {
             const auction = row.original.auction;
             return auction?.nama_lot || "N/A";
@@ -19,7 +19,7 @@ export const AuctionContentColumn: ColumnDef<AuctionContent>[] = [
     },
     {
         accessorKey: "item",
-        header: "Item",
+        header: "Barang",
         cell: ({ row }) => {
             const item = row.original.item;
             return item.bukti_kepemilikan || "N/A";
@@ -27,7 +27,7 @@ export const AuctionContentColumn: ColumnDef<AuctionContent>[] = [
     },
     {
         accessorKey: "seller",
-        header: "Seller",
+        header: "Penjual",
         cell: ({ row }) => {
             const seller = row.original.seller;
             return seller.nama || "N/A";
@@ -35,7 +35,7 @@ export const AuctionContentColumn: ColumnDef<AuctionContent>[] = [
     },
     {
         accessorKey: "organizer",
-        header: "Organizer",
+        header: "Penyelenggara",
         cell: ({ row }) => {
             const organizer = row.original.organizer;
             return organizer.nama_unit_kerja || "N/A";
@@ -43,13 +43,13 @@ export const AuctionContentColumn: ColumnDef<AuctionContent>[] = [
     },
     {
         accessorKey: "created_at",
-        header: "Dibuat Pada",
-        cell: ({ row }) => new Date(row.original.created_at).toLocaleDateString("id-ID"),
+        header: "Created at",
+        cell: ({ row }) => row.original.created_at,
     },
     {
         accessorKey: "updated_at",
-        header: "Diperbarui Pada",
-        cell: ({ row }) => new Date(row.original.updated_at).toLocaleDateString("id-ID"),
+        header: "Updated at",
+        cell: ({ row }) => row.original.updated_at,
     },
     {
         header: "Aksi",

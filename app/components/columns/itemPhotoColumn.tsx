@@ -41,7 +41,7 @@ export const ItemPhotoColumn: ColumnDef<ItemPhoto>[] = [
 
             return (
                 <Button variant={"outline"} onClick={() => {
-                    navigate(`/modul-jenis-pekerjaan/${data.id}`)
+                    navigate(`/modul-foto-barang/${data.id}`)
                 }}>
                     <SquareArrowOutUpRight/>
                 </Button>
