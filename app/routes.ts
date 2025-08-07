@@ -47,9 +47,9 @@ export default [
         ]),
         ...prefix("modul-jenis-barang", [
             index("components/pages/itemTypes/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/itemTypes/create-form.tsx"),
+            route("/:id", "components/pages/itemTypes/detail.tsx"),
+            // route("/:id/edit", "components/pages/itemTypes/update-form.tsx"),
         ]),
         ...prefix("modul-jenis-objek", [
             index("components/pages/objectTypes/index.tsx"),
