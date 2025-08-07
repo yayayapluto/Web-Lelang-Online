@@ -35,9 +35,9 @@ export default [
         ]),
         ...prefix("modul-jenis-pekerjaan", [
             index("components/pages/jobTypes/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/jobTypes/create-form.tsx"),
+            route("/:id", "components/pages/jobTypes/detail.tsx"),
+            // route("/:id/edit", "components/pages/jobTypes/update-form.tsx"),
         ]),
         ...prefix("modul-kategori-barang", [
             index("components/pages/categories/index.tsx"),
