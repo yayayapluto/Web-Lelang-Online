@@ -29,9 +29,9 @@ export default [
         ]),
         ...prefix("modul-kelurahan", [
             index("components/pages/villages/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/villages/create-form.tsx"),
+            route("/:id", "components/pages/villages/detail.tsx"),
+            // route("/:id/edit", "components/pages/villages/update-form.tsx"),
         ]),
         ...prefix("modul-jenis-pekerjaan", [
             index("components/pages/jobTypes/index.tsx"),
