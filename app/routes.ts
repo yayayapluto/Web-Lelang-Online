@@ -41,9 +41,9 @@ export default [
         ]),
         ...prefix("modul-kategori-barang", [
             index("components/pages/categories/index.tsx"),
-            // route("/add", "components/pages/countries/create-form.tsx"),
-            // route("/:id", "components/pages/countries/detail.tsx"),
-            // route("/:id/edit", "components/pages/countries/update-form.tsx"),
+            // route("/add", "components/pages/categories/create-form.tsx"),
+            route("/:id", "components/pages/categories/detail.tsx"),
+            // route("/:id/edit", "components/pages/categories/update-form.tsx"),
         ]),
         ...prefix("modul-jenis-barang", [
             index("components/pages/itemTypes/index.tsx"),
