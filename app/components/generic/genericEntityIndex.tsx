@@ -105,15 +105,20 @@ export default function GenericEntityIndex<T>({
     }, [reload]);
 
     useEffect(() => {
+        if (searchTerm.trim().length < 3 && searchTerm.trim().length > 0) return;
+
         const params = new URLSearchParams();
-        if (searchTerm.trim().length >= 3) params.append('search', searchTerm);
+        if (searchTerm) params.append('search', searchTerm);
         params.append('sortBy', sortBy);
         params.append('sortDir', sortDir);
 
         const newUrl = `${baseUrl}/api/${apiEndpoint}?${params.toString()}`;
         setUrl(newUrl);
-        // setReload(true);
     }, [sortBy, sortDir, searchTerm]);
+
+    useEffect(() => {
+        setReload(true);
+    }, [sortBy, sortDir]);
 
     // API call for main data
     const { isLoading, error, result } = useApi<PaginationResponse<T>>({
@@ -190,13 +195,14 @@ export default function GenericEntityIndex<T>({
         const value = event.target.value;
         setSearchTerm(value);
 
+
         if (searchTimeout.current) {
             clearTimeout(searchTimeout.current);
         }
 
         searchTimeout.current = setTimeout(() => {
             if (value.trim().length >= 3 || value.trim().length === 0) {
-                setReload(true);
+                setReload(true)
             }
         }, 500);
     };
