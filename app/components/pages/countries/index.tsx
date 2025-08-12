@@ -18,7 +18,7 @@ export default function CountryIndex() {
             }}
             sortOptions={[
                 { value: "nama", label: "Nama" },
-                { value: "code", label: "Kode" },
+                { value: "kode", label: "Kode" },
                 { value: "created_at", label: "Created at" }
             ]}
             breadcrumbs={[

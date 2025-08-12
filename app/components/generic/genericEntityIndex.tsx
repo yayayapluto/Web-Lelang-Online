@@ -1,4 +1,4 @@
-import React, { useState, useEffect, type ChangeEvent } from "react";
+import React, {useState, useEffect, type ChangeEvent, useRef} from "react";
 import {
     ArrowDownIcon, ArrowLeft, ArrowRight, ArrowUpIcon,
     FileText, Plus, RefreshCcw
@@ -106,13 +106,13 @@ export default function GenericEntityIndex<T>({
 
     useEffect(() => {
         const params = new URLSearchParams();
-        if (searchTerm) params.append('search', searchTerm);
+        if (searchTerm.trim().length >= 3) params.append('search', searchTerm);
         params.append('sortBy', sortBy);
         params.append('sortDir', sortDir);
 
         const newUrl = `${baseUrl}/api/${apiEndpoint}?${params.toString()}`;
         setUrl(newUrl);
-        setReload(true);
+        // setReload(true);
     }, [sortBy, sortDir, searchTerm]);
 
     // API call for main data
@@ -127,7 +127,7 @@ export default function GenericEntityIndex<T>({
     // Handle API errors
     useEffect(() => {
         if (!isLoading && error !== null) {
-            toast(error.toString());
+            // toast(error.toString());
         }
     }, [isLoading, error]);
 
@@ -149,17 +149,19 @@ export default function GenericEntityIndex<T>({
         },
         data: importFormData,
         trigger: doImport,
-        method: "POST"
+        method: "POST",
     });
 
     useEffect(() => {
         if (importResult !== null) {
-            toast.success(`${displayName} imported successfully`);
+            // toast.success(`${displayName} imported successfully`);
             setReload(true);
         }
-        if (importError) {
-            toast.error(`Failed to import ${displayName.toLowerCase()}: ${importError}`);
+        if (importError !== null) {
+            // toast.error(`Failed to import ${displayName.toLowerCase()}: ${importError}`);
         }
+
+        // console.log(importError)
     }, [importResult, importError]);
 
     useEffect(() => {
@@ -183,8 +185,20 @@ export default function GenericEntityIndex<T>({
         setSortDir(prevDir => (prevDir === "asc" ? "desc" : "asc"));
     };
 
+    const searchTimeout = useRef<NodeJS.Timeout | null>(null);
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchTerm(event.target.value);
+        const value = event.target.value;
+        setSearchTerm(value);
+
+        if (searchTimeout.current) {
+            clearTimeout(searchTimeout.current);
+        }
+
+        searchTimeout.current = setTimeout(() => {
+            if (value.trim().length >= 3 || value.trim().length === 0) {
+                setReload(true);
+            }
+        }, 500);
     };
 
     // Render batch import dialog if configured
@@ -251,7 +265,7 @@ export default function GenericEntityIndex<T>({
             <div className="flex flex-col py-4 justify-between gap-5">
                 <div className={"flex flex-col lg:flex-row gap-5"}>
                     <Input
-                        placeholder="Search"
+                        placeholder="Search (type minimum 3 characters)"
                         className="max-w-md min-w-44 text-sm"
                         value={searchTerm}
                         onChange={handleSearchChange}
